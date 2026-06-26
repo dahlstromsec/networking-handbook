@@ -1,34 +1,58 @@
-# TCP
+# TCP (Transmission Control Protocol)
 
-> Estimated Reading Time: 8–10 minutes
-> Difficulty: Beginner
-> Prerequisites: NAT & PAT
+> **Estimated Reading Time:** 10–15 minutes  
+> **Difficulty:** Beginner  
+> **Prerequisites:** NAT & PAT
 
-## Introduction
+Transmission Control Protocol (TCP) is one of the core transport protocols used on modern networks. It provides reliable, ordered communication between devices, ensuring that data arrives completely and in the correct sequence.
 
-Transmission Control Protocol (TCP) is a reliable transport protocol used whenever data must arrive completely and in the correct order.
+Many of the Internet's most important services, including web browsing, email and remote administration, rely on TCP.
 
 ---
 
-## What You'll Learn
+# What You'll Learn
 
+- What TCP is
 - Why TCP exists
-- The three-way handshake
-- Reliable delivery
+- The Three-Way Handshake
+- Reliable communication
 - Common TCP applications
 
 ---
 
-## Why It Matters
+# Why It Matters
 
-Banking, web browsing, email and SSH rely on TCP because lost or out-of-order data could cause problems.
+Imagine downloading an important document.
+
+If pieces of the file were lost or arrived out of order, the file would become corrupted.
+
+TCP solves this problem by ensuring that every packet arrives successfully before communication continues.
 
 ---
 
-## Main Concept
+# Core Concepts
 
-Connection setup:
+TCP is a **connection-oriented** protocol.
 
+Before data is exchanged, both devices establish a connection.
+
+TCP provides:
+
+- Reliable delivery
+- Packet sequencing
+- Error detection
+- Retransmission of lost packets
+- Flow control
+
+These features make TCP slower than UDP but significantly more reliable.
+
+---
+
+# How It Works
+
+Before communication begins, TCP performs the **Three-Way Handshake**.
+
+```text
 Client
 
 ↓
@@ -51,47 +75,96 @@ Client
 
 ACK
 
-Connection established.
+↓
+
+Connection Established
+```
+
+Once the connection has been established, both devices exchange data while acknowledging successful delivery.
+
+If a packet is lost, TCP automatically retransmits it.
 
 ---
 
-## Key Features
+# Diagram
 
-- Reliable delivery
-- Ordered packets
-- Error checking
-- Retransmission
-- Flow control
+```text
+Client
+
+↓
+
+Three-Way Handshake
+
+↓
+
+Reliable Connection
+
+↓
+
+Data Transfer
+
+↓
+
+Connection Closed
+```
 
 ---
 
-## Real-World Example
+# Real-World Example
 
-When downloading a PDF, TCP ensures every piece of the file arrives before it is opened.
+You download a PDF from a website.
+
+The file may be divided into hundreds of packets.
+
+TCP ensures every packet arrives correctly and reorders them if necessary before the document is opened.
+
+Without TCP, the downloaded file could become incomplete or corrupted.
 
 ---
 
-## Cybersecurity Context
+# Cybersecurity Context
 
-TCP is heavily analyzed during incident response, firewall configuration and packet captures.
+TCP appears constantly during cybersecurity investigations.
+
+Analysts examine TCP traffic when:
+
+- Reviewing packet captures
+- Troubleshooting network issues
+- Investigating suspicious connections
+- Configuring firewall rules
+- Detecting network attacks
+
+Understanding TCP is essential when using tools such as Wireshark.
 
 ---
 
-## Interview Questions
+# Common Mistakes
 
-- Why is TCP reliable?
-- What is the three-way handshake?
+| Mistake | Explanation |
+|----------|-------------|
+| TCP is faster than UDP | TCP sacrifices speed to achieve reliability. |
+| TCP guarantees low latency | Reliable communication often introduces additional overhead. |
+| TCP only transfers files | TCP supports many protocols including HTTP, HTTPS and SSH. |
+
+---
+
+# Interview Questions
+
+- What is TCP?
+- Why is TCP considered reliable?
+- What is the Three-Way Handshake?
+- Why does TCP retransmit packets?
 - Name three protocols that use TCP.
 
 ---
 
-## Summary
+# Summary
 
-TCP prioritizes reliability and accuracy over speed.
+TCP provides reliable communication by establishing a connection, verifying packet delivery and retransmitting lost data when necessary.
 
 ---
 
-## Related Chapters
+# Related Chapters
 
 - UDP
 - HTTP
