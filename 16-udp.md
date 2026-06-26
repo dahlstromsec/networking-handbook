@@ -1,88 +1,151 @@
-# UDP
+# UDP (User Datagram Protocol)
 
-> Estimated Reading Time: 8–10 minutes
-> Difficulty: Beginner
-> Prerequisites: TCP
+> **Estimated Reading Time:** 10–15 minutes  
+> **Difficulty:** Beginner  
+> **Prerequisites:** TCP
 
-## Introduction
+User Datagram Protocol (UDP) is a lightweight transport protocol designed for speed rather than reliability. Unlike TCP, UDP does not establish a connection before sending data and does not guarantee that packets arrive successfully.
 
-User Datagram Protocol (UDP) is a lightweight transport protocol designed for speed rather than reliability.
+Many real-time applications rely on UDP because receiving data quickly is often more important than receiving every packet.
 
 ---
 
-## What You'll Learn
+# What You'll Learn
 
+- What UDP is
 - Why UDP exists
-- TCP vs UDP
+- How UDP differs from TCP
 - Common UDP applications
+- Advantages and disadvantages
 
 ---
 
-## Why It Matters
+# Why It Matters
 
-Some applications value low latency more than guaranteed delivery.
+Imagine participating in a live video conference.
+
+If one video frame is lost, you may barely notice.
+
+However, waiting for the missing frame to be retransmitted would cause noticeable delays.
+
+UDP accepts occasional packet loss to keep communication fast and responsive.
 
 ---
 
-## Main Concept
+# Core Concepts
 
+UDP is a **connectionless** protocol.
+
+Unlike TCP, UDP:
+
+- Does not establish a connection.
+- Does not acknowledge received packets.
+- Does not retransmit lost packets.
+- Does not guarantee packet order.
+
+Because of this, UDP introduces very little overhead and is significantly faster than TCP in many situations.
+
+---
+
+# How It Works
+
+An application creates data.
+
+↓
+
+UDP places the data into a datagram.
+
+↓
+
+The datagram is sent immediately.
+
+↓
+
+The destination receives the packet.
+
+↓
+
+Communication ends.
+
+If packets are lost during transmission, UDP simply continues sending new packets without attempting recovery.
+
+---
+
+# Diagram
+
+```text
 Application
 
 ↓
 
-UDP
-
-↓
-
-IP
+UDP Datagram
 
 ↓
 
 Network
 
-No connection setup.
-No acknowledgements.
-No retransmissions.
+↓
+
+Destination
+```
 
 ---
 
-## Common Uses
+# Real-World Example
 
-- DNS
+During an online multiplayer game, hundreds of packets are exchanged every second.
+
+If one packet is lost, the game continues.
+
+Waiting for retransmissions would increase latency and negatively affect gameplay.
+
+This makes UDP an ideal choice for real-time communication.
+
+---
+
+# Cybersecurity Context
+
+UDP is frequently encountered during:
+
+- DNS communication
 - VoIP
 - Live streaming
-- Online gaming
+- Network scanning
+- Reflection and amplification attacks
+
+Security analysts often investigate unusual UDP traffic because attackers commonly abuse UDP-based services.
 
 ---
 
-## Real-World Example
+# Common Mistakes
 
-A live video call can tolerate an occasional lost packet better than delayed audio.
-
----
-
-## Cybersecurity Context
-
-Many attacks target UDP services because they are connectionless. Analysts also investigate unusual UDP traffic during incident response.
+| Mistake | Explanation |
+|----------|-------------|
+| UDP is better than TCP | UDP is faster, but TCP is more reliable. |
+| UDP guarantees delivery | Lost packets are not retransmitted. |
+| UDP is only used for gaming | Many important services such as DNS also use UDP. |
 
 ---
 
-## Interview Questions
+# Interview Questions
 
+- What is UDP?
 - Why is UDP faster than TCP?
-- Which protocol uses UDP for name resolution?
-- When would UDP be preferred?
+- Which applications commonly use UDP?
+- Does UDP guarantee packet delivery?
+- When should UDP be preferred over TCP?
 
 ---
 
-## Summary
+# Summary
 
-UDP sacrifices reliability to achieve low latency and fast communication.
+UDP is a fast, connectionless transport protocol that prioritizes speed over reliability. It is commonly used for real-time communication where low latency is more important than guaranteed delivery.
 
 ---
 
-## Related Chapters
+# Related Chapters
 
 - TCP
-- DNS
 - ICMP
+- DNS
+- HTTP
