@@ -2,9 +2,11 @@
 
 A practical networking handbook built while studying cybersecurity.
 
-This repository contains my personal networking notes covering essential networking concepts, protocols, and technologies. The goal is to create a well-organized handbook that serves as both a learning resource and a quick reference for networking and cybersecurity.
+This repository contains my personal networking handbook covering the fundamental concepts, protocols and technologies used in modern computer networks.
 
-Rather than simply listing protocols and definitions, each chapter explains **what a concept is, why it matters, how it works, common real-world use cases, and where it applies in cybersecurity.**
+The goal is to provide a structured learning resource that explains not only **what networking technologies are**, but also **why they exist, how they work, and where they are used in real-world environments.**
+
+Rather than simply listing definitions, each chapter focuses on building intuition through explanations, diagrams, examples and cybersecurity context.
 
 ---
 
@@ -13,16 +15,19 @@ Rather than simply listing protocols and definitions, each chapter explains **wh
 Each chapter includes:
 
 - Clear explanations of networking concepts
-- Real-world examples
-- Practical cybersecurity context
-- Interview questions for review
+- Why the technology exists
+- How it works step-by-step
+- Diagrams and practical examples
+- Cybersecurity context
+- Common mistakes and misconceptions
+- Interview questions
 - Related chapters for continued learning
 
 ---
 
-## Repository Structure
+# Repository Structure
 
-### Foundations
+## Foundations
 
 - 00 Introduction to Networking
 - 01 OSI Model
@@ -37,32 +42,32 @@ Each chapter includes:
 - 10 ARP
 - 11 IPv6
 
-### Core Network Services
+## Core Network Services
 
 - 12 DNS
 - 13 DHCP
 - 14 NAT & PAT
 
-### Transport Protocols
+## Transport Protocols
 
 - 15 TCP
 - 16 UDP
 - 17 ICMP
 
-### Application Protocols
+## Application Protocols
 
 - 18 HTTP
 - 19 HTTPS
 - 20 SSH
 - 21 Email Protocols
 
-### Network Security
+## Network Security
 
 - 22 Firewalls
 - 23 IDS & IPS
 - 24 VPNs
 
-### Practical Skills
+## Practical Skills
 
 - 25 Wireshark & Network Troubleshooting
 
@@ -70,7 +75,7 @@ Each chapter includes:
 
 ## Goal
 
-The goal of this repository is to build a practical networking handbook that serves as both a learning resource and a quick reference while studying networking and cybersecurity.
+Build a practical networking handbook that serves as both a learning resource and a quick reference while studying networking and cybersecurity.
 
 ---
 
@@ -90,4 +95,4 @@ This project is licensed under the MIT License.
 
 ---
 
-This handbook will continue to grow throughout my cybersecurity studies as I learn new networking technologies, security concepts, and best practices.
+This handbook will continue to evolve throughout my cybersecurity studies as I gain more practical experience and expand my understanding of networking technologies and security concepts.
