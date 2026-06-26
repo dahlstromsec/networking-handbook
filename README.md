@@ -2,7 +2,21 @@
 
 A practical networking handbook built while studying cybersecurity.
 
-The goal of this repository is to provide concise, beginner-friendly explanations of networking concepts with practical examples and cybersecurity context.
+This repository contains my personal networking notes covering essential networking concepts, protocols, and technologies. The goal is to create a well-organized handbook that serves as both a learning resource and a quick reference for networking and cybersecurity.
+
+Rather than simply listing protocols and definitions, each chapter explains **what a concept is, why it matters, how it works, common real-world use cases, and where it applies in cybersecurity.**
+
+---
+
+## What You'll Find
+
+Each chapter includes:
+
+- Clear explanations of networking concepts
+- Real-world examples
+- Practical cybersecurity context
+- Interview questions for review
+- Related chapters for continued learning
 
 ---
 
@@ -23,7 +37,7 @@ The goal of this repository is to provide concise, beginner-friendly explanation
 - 10 ARP
 - 11 IPv6
 
-### Core Services
+### Core Network Services
 
 - 12 DNS
 - 13 DHCP
@@ -42,7 +56,7 @@ The goal of this repository is to provide concise, beginner-friendly explanation
 - 20 SSH
 - 21 Email Protocols
 
-### Security
+### Network Security
 
 - 22 Firewalls
 - 23 IDS & IPS
@@ -56,4 +70,24 @@ The goal of this repository is to provide concise, beginner-friendly explanation
 
 ## Goal
 
-Build a practical networking reference that complements the Linux Handbook and grows throughout my cybersecurity studies.
+The goal of this repository is to build a practical networking handbook that serves as both a learning resource and a quick reference while studying networking and cybersecurity.
+
+---
+
+## Audience
+
+This handbook is intended for:
+
+- Students learning networking
+- IT and cybersecurity beginners
+- Anyone looking for a practical networking reference
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+This handbook will continue to grow throughout my cybersecurity studies as I learn new networking technologies, security concepts, and best practices.
