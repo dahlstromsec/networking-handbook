@@ -1,36 +1,79 @@
 # Ethernet
 
-> Estimated Reading Time: 8–10 minutes
-> Difficulty: Beginner
-> Prerequisites: TCP/IP Model
+> **Estimated Reading Time:** 10–15 minutes  
+> **Difficulty:** Beginner  
+> **Prerequisites:** TCP/IP Model
 
-## Introduction
+Ethernet is the most widely used technology for communication inside wired Local Area Networks (LANs). It defines how devices communicate on the same network using Ethernet frames and MAC addresses.
 
-Ethernet is the most common technology used to connect devices within a local area network (LAN). It defines how devices send and receive data over wired networks.
+Although Wi-Fi is common today, most business networks still rely heavily on Ethernet for fast, reliable and stable communication.
 
 ---
 
-## What You'll Learn
+# What You'll Learn
 
 - What Ethernet is
-- Frames and MAC addresses
-- Ethernet switches
+- How Ethernet communication works
+- Ethernet frames
+- The role of MAC addresses
 - Why Ethernet is important
 
 ---
 
-## Why It Matters
+# Why It Matters
 
-Most office networks rely on Ethernet. Even when using Wi-Fi, the access point usually connects to the rest of the network using Ethernet.
+Whenever two computers communicate on the same wired network, Ethernet is usually responsible for delivering the data.
+
+Understanding Ethernet is essential before learning switches, VLANs and ARP.
 
 ---
 
-## Main Concept
+# Core Concepts
 
-Ethernet sends data as **frames** across a local network.
+Ethernet operates at **Layer 2 (Data Link)** of the OSI Model.
 
-Simple communication flow:
+Instead of sending packets directly, Ethernet sends **frames** between devices connected to the same local network.
 
+Every Ethernet frame contains information such as:
+
+- Source MAC address
+- Destination MAC address
+- Data payload
+- Error checking information
+
+The destination device reads the frame and determines whether it should process or ignore it.
+
+---
+
+# How It Works
+
+Imagine Computer A wants to send a file to Computer B.
+
+Computer A creates the data.
+
+↓
+
+IP prepares the packet.
+
+↓
+
+Ethernet places the packet inside an Ethernet frame.
+
+↓
+
+The frame travels through a switch.
+
+↓
+
+Computer B receives the frame and extracts the original data.
+
+This process happens thousands of times every second on busy networks.
+
+---
+
+# Diagram
+
+```text
 Computer
 
 ↓
@@ -44,36 +87,63 @@ Switch
 ↓
 
 Destination Device
+```
 
 ---
 
-## Real-World Example
+# Real-World Example
 
-When you print a document to a network printer, the data typically travels over Ethernet through one or more switches.
+Imagine an office with twenty employee computers connected to the same switch.
 
----
+When one employee prints a document, Ethernet delivers the data across the local network to the printer without involving the Internet.
 
-## Cybersecurity Context
-
-Many attacks begin inside a local network. Understanding Ethernet helps explain MAC flooding, packet captures and switch security.
+This local communication happens extremely quickly because Ethernet is optimized for LAN environments.
 
 ---
 
-## Interview Questions
+# Cybersecurity Context
+
+Understanding Ethernet helps explain:
+
+- MAC spoofing
+- MAC flooding attacks
+- Packet captures
+- Switch security
+- VLAN implementation
+
+Many investigations begin by examining Ethernet traffic before moving to higher-layer protocols.
+
+---
+
+# Common Mistakes
+
+| Mistake | Explanation |
+|----------|-------------|
+| Ethernet and the Internet are the same thing | Ethernet is used inside local networks. |
+| Ethernet uses IP addresses | Ethernet forwards frames using MAC addresses. |
+| Ethernet only works with cables | Ethernet standards include copper and fiber connections. |
+
+---
+
+# Interview Questions
 
 - What is Ethernet?
-- What type of address does Ethernet use?
-- Is Ethernet used on LANs or the Internet?
+- Which OSI layer uses Ethernet?
+- What information is stored inside an Ethernet frame?
+- Why are MAC addresses important?
+- Where is Ethernet commonly used?
 
 ---
 
-## Summary
+# Summary
 
-Ethernet provides the foundation for communication inside most wired local networks.
+Ethernet is the foundation of most wired local networks. It allows devices to exchange data efficiently by sending Ethernet frames between MAC addresses on the same network.
 
 ---
 
-## Related Chapters
+# Related Chapters
 
 - MAC Addresses
 - Switching
+- ARP
+- VLANs
