@@ -1,17 +1,18 @@
-# DHCP
+# DHCP (Dynamic Host Configuration Protocol)
 
-> Estimated Reading Time: 8–10 minutes
-> Difficulty: Beginner
-> Prerequisites: DNS
+> **Estimated Reading Time:** 10–15 minutes  
+> **Difficulty:** Beginner  
+> **Prerequisites:** DNS
 
-## Introduction
+The Dynamic Host Configuration Protocol (DHCP) automatically assigns network configuration to devices when they connect to a network. Instead of manually configuring every computer with an IP address, subnet mask and default gateway, DHCP performs the process automatically.
 
-Dynamic Host Configuration Protocol (DHCP) automatically assigns IP configuration to devices joining a network.
+Nearly every home and business network relies on DHCP.
 
 ---
 
-## What You'll Learn
+# What You'll Learn
 
+- What DHCP is
 - Why DHCP exists
 - The DORA process
 - DHCP leases
@@ -19,13 +20,70 @@ Dynamic Host Configuration Protocol (DHCP) automatically assigns IP configuratio
 
 ---
 
-## Why It Matters
+# Why It Matters
 
-Without DHCP, administrators would have to manually configure every device on a network.
+Imagine manually configuring the network settings for hundreds of employee computers.
+
+Every new laptop, printer or phone would require manual configuration.
+
+DHCP eliminates this work by automatically assigning network settings whenever a device joins the network.
 
 ---
 
-## Main Concept
+# Core Concepts
+
+A DHCP server provides devices with:
+
+- IP Address
+- Subnet Mask
+- Default Gateway
+- DNS Server
+- Lease Duration
+
+Instead of permanently assigning an address, DHCP leases an address for a limited period.
+
+When the lease expires, the device renews it automatically.
+
+---
+
+# How It Works
+
+The DHCP process is commonly remembered as **DORA**.
+
+**Discover**
+
+↓
+
+The client searches for a DHCP server.
+
+↓
+
+**Offer**
+
+The DHCP server offers an available IP address.
+
+↓
+
+**Request**
+
+The client requests the offered address.
+
+↓
+
+**Acknowledge**
+
+The server confirms the lease.
+
+The entire process usually completes in only a few seconds.
+
+---
+
+# Diagram
+
+```text
+Client
+
+↓
 
 Discover
 
@@ -41,37 +99,88 @@ Request
 
 Acknowledge
 
-(DORA)
+↓
+
+IP Address Assigned
+```
 
 ---
 
-## Real-World Example
+# Useful Commands
 
-When you connect your laptop to Wi-Fi, DHCP usually assigns an IP address within seconds.
+```bash
+ip a
+```
+
+View the assigned IP address.
+
+```bash
+ipconfig /all
+```
+
+(View DHCP information on Windows.)
 
 ---
 
-## Cybersecurity Context
+# Real-World Example
 
-Rogue DHCP servers can provide incorrect network settings and redirect traffic.
+You connect your laptop to a coffee shop Wi-Fi network.
+
+Within seconds your computer automatically receives:
+
+- An IP address
+- Default gateway
+- DNS server
+- Subnet mask
+
+No manual configuration is required.
 
 ---
 
-## Interview Questions
+# Cybersecurity Context
 
-- What does DHCP do?
+DHCP simplifies administration but also introduces risks.
+
+Examples include:
+
+- Rogue DHCP servers
+- Incorrect network configuration
+- Traffic redirection attacks
+- Unauthorized devices joining the network
+
+Enterprise networks often implement DHCP Snooping to protect against malicious DHCP servers.
+
+---
+
+# Common Mistakes
+
+| Mistake | Explanation |
+|----------|-------------|
+| DHCP only assigns IP addresses | DHCP also provides DNS servers, gateways and other configuration. |
+| DHCP addresses never change | Addresses are leased and may change over time. |
+| Every network requires DHCP | Static IP addresses can also be configured manually. |
+
+---
+
+# Interview Questions
+
+- What is DHCP?
 - What does DORA stand for?
-- Why are DHCP leases used?
+- What information does DHCP provide?
+- What is a DHCP lease?
+- Why is DHCP important?
 
 ---
 
-## Summary
+# Summary
 
-DHCP simplifies network administration by automatically assigning IP configuration.
+DHCP automates network configuration by assigning IP addresses and other essential settings to devices. This simplifies administration and allows new devices to join a network quickly.
 
 ---
 
-## Related Chapters
+# Related Chapters
 
 - DNS
 - NAT & PAT
+- IPv4 Addressing
+- Routing
