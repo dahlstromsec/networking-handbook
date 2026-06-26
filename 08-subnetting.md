@@ -1,90 +1,162 @@
-# Subnetting
+# IPv4 Addressing
 
-> Estimated Reading Time: 10 minutes
-> Difficulty: Beginner–Intermediate
-> Prerequisites: IPv4 Addressing
+> **Estimated Reading Time:** 10–15 minutes  
+> **Difficulty:** Beginner  
+> **Prerequisites:** VLANs
 
-## Introduction
+Every device connected to an IP network requires an Internet Protocol (IP) address. An IPv4 address uniquely identifies a device and allows routers to determine where packets should be delivered.
 
-Subnetting divides a network into smaller networks. It improves organization, security and efficient use of IP addresses.
-
----
-
-## What You'll Learn
-
-- Network vs Host bits
-- CIDR notation
-- Subnet masks
-- Why subnetting is important
+IPv4 remains the most widely used addressing system in modern networks, although it is gradually being complemented by IPv6.
 
 ---
 
-## Why It Matters
+# What You'll Learn
 
-Organizations rarely place every device on one giant network. Smaller networks improve performance and reduce security risks.
-
----
-
-## Main Concept
-
-Common subnet masks:
-
-| CIDR | Mask |
-|------|----------------|
-|/24|255.255.255.0|
-|/25|255.255.255.128|
-|/26|255.255.255.192|
-
-Smaller subnets create more networks with fewer hosts.
+- What an IPv4 address is
+- Public and private IP addresses
+- Network and host portions
+- Special IPv4 addresses
+- Why IP addressing is important
 
 ---
 
-## Diagram
+# Why It Matters
 
-192.168.1.0/24
+Imagine trying to mail a letter without writing an address on the envelope.
+
+No one would know where it should be delivered.
+
+IPv4 addresses solve the same problem for computer networks by uniquely identifying devices and allowing routers to forward packets correctly.
+
+---
+
+# Core Concepts
+
+An IPv4 address is a **32-bit logical address** written as four decimal numbers separated by periods.
+
+Example:
+
+```text
+192.168.1.25
+```
+
+Every IPv4 address consists of two parts:
+
+- **Network Portion** – Identifies the network.
+- **Host Portion** – Identifies a specific device.
+
+Common private IPv4 ranges include:
+
+| Range | CIDR |
+|--------|------|
+| 10.0.0.0 – 10.255.255.255 | /8 |
+| 172.16.0.0 – 172.31.255.255 | /12 |
+| 192.168.0.0 – 192.168.255.255 | /16 |
+
+Private addresses are used inside local networks and are not directly routable across the Internet.
+
+---
+
+# How It Works
+
+Your computer wants to visit a website.
 
 ↓
 
-Office
+It creates a packet using its own IP address as the source.
 
 ↓
 
-Servers
+The destination website's IP address is added to the packet.
 
 ↓
 
-Guest Wi-Fi
+The packet is sent to the default gateway.
+
+↓
+
+Routers examine the destination IP address and forward the packet until it reaches the correct network.
+
+Every router along the path repeats this process.
 
 ---
 
-## Real-World Example
+# Diagram
 
-A company separates employees, servers and guest devices into different subnets to improve performance and security.
+```text
+PC
 
----
+192.168.1.25
 
-## Cybersecurity Context
+↓
 
-Subnetting limits broadcast traffic and supports network segmentation, reducing an attacker's ability to move across a network.
+Router
 
----
+↓
 
-## Interview Questions
+Internet
 
-- What does /24 mean?
-- Why do organizations subnet networks?
-- What is the purpose of a subnet mask?
+↓
 
----
+203.0.113.10
 
-## Summary
-
-Subnetting organizes networks into smaller, more manageable sections.
+Web Server
+```
 
 ---
 
-## Related Chapters
+# Real-World Example
 
-- IPv4 Addressing
+Your home router assigns private IPv4 addresses to your laptop, phone and smart TV.
+
+Although each device has its own private IP address, the router uses Network Address Translation (NAT) to allow all devices to share a single public IP address when accessing the Internet.
+
+---
+
+# Cybersecurity Context
+
+IPv4 addresses appear throughout cybersecurity.
+
+Security professionals use them to:
+
+- Investigate suspicious traffic.
+- Configure firewall rules.
+- Analyze logs.
+- Perform network scans.
+- Identify affected systems during incidents.
+
+Understanding IP addressing is one of the most fundamental networking skills.
+
+---
+
+# Common Mistakes
+
+| Mistake | Explanation |
+|----------|-------------|
+| IP addresses never change | Many devices receive dynamic addresses from DHCP. |
+| Private IP addresses work across the Internet | Private addresses require NAT to communicate externally. |
+| MAC addresses and IP addresses are the same | MAC addresses identify devices locally, while IP addresses identify devices across networks. |
+
+---
+
+# Interview Questions
+
+- What is an IPv4 address?
+- What is the difference between public and private IP addresses?
+- What are the two parts of an IPv4 address?
+- Why are routers dependent on IP addresses?
+
+---
+
+# Summary
+
+IPv4 addressing provides the logical addressing system used to identify devices and route packets across networks. Understanding IP addressing is essential before learning subnetting and routing.
+
+---
+
+# Related Chapters
+
+- Subnetting
 - Routing
-- VLANs
+- NAT & PAT
+- ARP
