@@ -1,6 +1,6 @@
 # Networking Handbook
 
-A practical networking handbook built while studying cybersecurity.
+A practical networking handbook covering modern networking fundamentals with real-world examples and cybersecurity context.
 
 This repository contains my personal networking handbook covering the fundamental concepts, protocols and technologies used in modern computer networks.
 
